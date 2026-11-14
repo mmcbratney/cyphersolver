@@ -89,3 +89,17 @@ Image total: 1,340 + 1,054 + 576 + 130 + 807 + 978 + 503 + 315 + 458 + 384 + 679
 - Not paged by anyone as far as the repo shows (no catalogue/leads row; only stray `00100020/24/36` strings in research files,
   not checked): MAP filze of letters to Lorenzo XX-XXXVIII, XLI, XLVI, LV, LX, LXVI, LXVIII.
 - Vito 2025 (HistoCrypt) could not be opened. Its Florentine polyalphabetic key may bear on 15th-c. MAP letters.
+
+## Sources that need a browser or Wayback route (for COVERAGE.md)
+
+Added 14 Nov 2026 at the maintainer's request (#542). The list covers this contributor's sweeps and fetches of 11-14 Nov 2026, not just this pass. Under the contributor's own rules we do not use a browser to get past a bot check, so each route below is recorded as needed and not tried, unless stated otherwise.
+
+| Source | What happened (date, our session) | Route needed |
+|---|---|---|
+| Trove (NLA), newspapers | `api.trove.nla.gov.au/v3` answers 401 without an API key. The search pages are a JavaScript app: they work in a browser, and an empty shell comes back to curl (14 Nov) | an API key (free registration) or a browser |
+| Papers Past (NLNZ) | Incapsula bot page to curl (14 Nov) | browser |
+| Riksarkivet search, `sok.riksarkivet.se` | 403 WAF to curl (12-13 Nov, b130, b182). The open-data API at `data.riksarkivet.se` and the IIIF images of scanned volumes answered | browser for search; the API for records |
+| PARES (Spain) | 429 to curl (13 Nov, b159). Note: `ViewImage` serves the images of the last `catalogo/show` page opened, so open `show/<id>` before fetching its images | browser, at a low rate |
+| BNE (bdh-rd, bnedigital) | Cloudflare block after automated searches (11 Nov), 403 later (13 Nov, b159) | browser, by hand |
+| dspace.ut.ee | connection reset (13 Nov, this pass) | another network or Wayback |
+| litbit.ru | JavaScript bot check (13 Nov, this pass) | not needed; the Gutenberg text was used |
